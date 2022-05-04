@@ -1,16 +1,8 @@
-const apiKey = 'AIzaSyCwASQhCWkuZ5ESZQrzNMzAL80JlgGAQuc'
-
-// fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=xqc&videoDuration=any&key=${apiKey}`)
-// .then( res => res.json())
-// .then(data => console.log(data))
-// .catch(error => console.log('ERROR'))
+const apiKey = process.env.API_KEY
 
 const videos = document.getElementById('videos')
 const video = document.getElementById('video')
 const subVideo = document.getElementById('sub-video')
-
-
-// const search = document.getElementById('search').value
 
 const searchVideo = async () => {
 

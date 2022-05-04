@@ -1,0 +1,77 @@
+:root {
+  --primary-color: rgba(89, 168, 156, 0.7);
+  --secondary-color: rgb(30, 30, 30, 0.7);
+  --tertiary-color: rgb(82, 82, 82);
+  --footer-color: rgba(0, 0, 0, 0.2);
+  --off-white: rgb(239, 239, 239);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 150px; /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px; /* Footer height */
+}
+
+body {
+  background-color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--off-white);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--off-white);
+}
+
+/* Nav */
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--off-white);
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  /* margin: 15px; */
+  background-color: var(--secondary-color);
+}
+
+.video-frame {
+  border: 5px solid var(--primary-color);
+  width: 768px;
+  height: 432px;
+}
+
+/* footer */
+.icon-container {
+    background-color: var(--secondary-color);
+}
+
+.copyright-color {
+    background-color: var(--footer-color);
+}

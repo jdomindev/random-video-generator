@@ -2,9 +2,8 @@
 require("dotenv").config();
 const express = require("express");
 const rateLimit = require("express-rate-limit");
-const router = express.Router();
-const port = process.env.PORT;
-
+const app = express();
+const PORT = process.env.PORT || 3000;
 // Enable if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
 // see https://expressjs.com/en/guide/behind-proxies.html
 // app.set('trust proxy', 1);
@@ -18,14 +17,14 @@ const limiter = rateLimit({
 app.use(limiter)
 
 // Routes
+app.use('/', express.static(__dirname));
 
-const videoData = require('./fetch')
-// Test route, visit localhost:3000 to confirm it's working
-// should show 'Hello World!' in the browser
-router.get("/", (req, res) => res.send("Hello World!"));
+const fetch = require('./js/fetch')
 
-router.use('/fetch', videoData)
-
+// app.use('/fetch', videoData)
+app.get('/search', async (req, res) => {
+	fetch()
+})
 // Our Goodreads relay route!
 // app.get("/api/search", async (req, res) => {
 // 	try {
@@ -61,6 +60,4 @@ router.use('/fetch', videoData)
 // This spins up our sever and generates logs for us to use.
 // Any console.log statements you use in node for debugging will show up in your
 // terminal, not in the browser console!
-router.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
-module.exports = router
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));

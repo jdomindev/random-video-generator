@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgba(89, 168, 156, 0.7);
+  --primary-color: rgba(128, 31, 31, 0.7);
   --secondary-color: rgb(30, 30, 30, 0.7);
   --tertiary-color: rgb(82, 82, 82);
   --footer-color: rgba(0, 0, 0, 0.2);
@@ -15,6 +15,11 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
+/* h1, h2, h3, h4, h5, h6, .nav-link {
+  padding: 0px;
+  margin: 0px;
+} */
 
 #page-container {
   position: relative;
@@ -50,6 +55,10 @@ a:hover {
 .navbar {
   background-color: var(--primary-color);
   color: var(--off-white);
+}
+
+.nav-link {
+  font-size: 20px;
 }
 
 .video-container {

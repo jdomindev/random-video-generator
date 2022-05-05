@@ -1,0 +1,43 @@
+<div>
+    <div class="row text-center">
+        <div class="col-md-12 p-5">
+            <div class="container">
+                <input type="text" class="form-control mb-2" id="search" />
+                <input
+                onclick="fetch()"
+                type="button"
+                class="btn btn-primary"
+                value="Search"
+                />
+                <input
+                type="button"
+                class="btn btn-secondary"
+                value="Generate Random"
+                />
+            </div>
+        </div>
+    </div>
+            <!-- 1024 x 576 -->
+            <!-- 768 x 432  -->
+            <!-- 420 x 315 -->
+    <div class="row flex-column">
+        <div class="col-md-12 video-container">
+            <iframe
+                id="video"
+                class="video-frame"
+                src=""
+                frameborder="0"
+                allowfullscreen
+            ></iframe>
+        </div>
+        <div class="col-md-12 video-container">
+            <iframe
+                id="sub-video"
+                class="video-frame sub-video"
+                src=""
+                frameborder="0"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+</div>
